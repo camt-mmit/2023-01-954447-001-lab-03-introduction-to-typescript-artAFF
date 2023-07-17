@@ -20,12 +20,12 @@ export function createSectionComponent(componentElement: HTMLElement) {
     );
 
     children.forEach((element, i) => {
-      [...element.querySelectorAll(".app-cmp-add-section-no")].forEach((elem) => {
+      [...element.querySelectorAll<HTMLInputElement>(".app-cmp-add-section-no")].forEach((elem) => {
         elem.textContent = `${i + 1}`;
       });
     });
 
-    [...inputList.querySelectorAll(".app-cmd-remove-section")].forEach(
+    [...inputList.querySelectorAll<HTMLInputElement>(".app-cmd-remove-section")].forEach(
       (elem) => (elem.disabled = children.length === 1)
     );
   };
