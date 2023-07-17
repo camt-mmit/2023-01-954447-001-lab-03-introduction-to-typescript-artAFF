@@ -1,0 +1,152 @@
+:root {
+  --app-font: sans-serif;
+  --app-font-size: 16px;
+
+  --app-icon-fill: 1;
+
+  --app-primary-color: #0000ff;
+  --app-warn-color: #ff0000;
+
+  font-family: var(--app-font);
+  font-size: var(--app-font-size);
+}
+
+:root,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+button,
+input,
+select {
+  font-family: var(--app-font);
+  font-size: inherit;
+}
+
+button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 4px;
+
+  padding: 4px;
+
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.25;
+
+  --app-icon-fill: 0;
+}
+
+button > * {
+  pointer-events: none;
+}
+
+.app-cl-dummy {
+  visibility: hidden;
+}
+
+.app-cl-primary {
+  color: var(--app-primary-color);
+}
+
+.app-cl-warn {
+  color: var(--app-warn-color);
+}
+
+input[type="number"],
+.app-cl-number {
+  font-family: monospace;
+  text-align: right;
+}
+
+.app-cmp-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 500px;
+}
+
+.app-cmp-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.app-cmp-inputs-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.app-cmp-input-container {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.app-cmp-input-container > label {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  flex: 1 0 auto;
+}
+
+.app-cmp-input-container > label > .app-cmp-input,
+.app-cmp-input-container > label > .app-cmp-result {
+  flex: 1 0 auto;
+}
+
+.app-cmp-input-title {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+  min-width: 15ch;
+}
+
+.app-cmp-input-title::after {
+  content: "::";
+  padding-left: 1ch;
+  padding-right: 1ch;
+
+  color: var(--app-primary-color);
+  font-weight: bold;
+
+  margin-left: auto;
+}
+
+.app-cmp-input-no {
+  display: inline-block;
+  min-width: 3ch;
+}
+
+.app-cmp-input-title > .app-cmp-input-no {
+  flex: 1 0 auto;
+}
+
+.app-cmp-result {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 1px 2px;
+
+  border: 2px solid transparent;
+
+  margin-right: 1.5ch;
+
+  text-decoration: underline double #000000;
+}
