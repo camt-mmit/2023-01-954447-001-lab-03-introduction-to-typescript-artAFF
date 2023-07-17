@@ -1,5 +1,4 @@
-import { createSectionComponent } from "./section-component.js";
-
+import { createSectionComponent } from './section-component.js';
 
 createSectionComponent(document.body);
 

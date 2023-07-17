@@ -1,5 +1,5 @@
-import { createComponent } from "./input-component.js";
+import { createComponent } from './input-component.js';
 
 createComponent(document.body);
 
-  // npx http-server -c0 ()
+// npx http-server -c0 ()
